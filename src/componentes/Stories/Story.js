@@ -1,5 +1,4 @@
 export default function Story(props) {
-    console.log(props)
     const {name, profile_pic} = props;
 
     return (

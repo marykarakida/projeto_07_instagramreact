@@ -197,6 +197,9 @@
   .liked {
     color: red;
   }
+  .hide {
+    display: none;
+  }
   
   .post .fundo .curtidas {
     display: flex;

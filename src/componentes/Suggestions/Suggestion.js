@@ -1,11 +1,12 @@
 export default function Suggestion(props) {
+    const {username, pic, reason} = props
     return (
         <div className="sugestao">
             <div className="usuario">
-                <img src={props.pic} alt={"Imagem de perfil do " + props.username} />
+                <img src={pic} alt={"Imagem de perfil do " + username} />
                 <div className="texto">
-                    <div className="nome">{props.username}</div>
-                    <div className="razao">Segue você</div>
+                    <div className="nome">{username}</div>
+                    <div className="razao">{reason}</div>
                 </div>
             </div>
 

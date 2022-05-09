@@ -1,12 +1,12 @@
-export default function Usuario() {
-    const usuario = {username: "catanacomics", name:"Catana", profile_pic: "./assets/img/catanacomics.svg"};
+export default function Usuario(props) {
+    const {username, name, pic} = props;
 
     return (
         <div className="usuario">
-            <img src={usuario.profile_pic} alt={"Imagem de perfil do " + usuario.username} />
+            <img src={pic} alt={"Imagem de perfil do(a) " + username} />
             <div className="texto">
-                <strong>{ usuario.username} </strong>
-                {usuario.name}
+                <strong>{username} </strong>
+                {name}
             </div>
         </div>
     )
