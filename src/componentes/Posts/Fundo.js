@@ -1,28 +1,13 @@
 import React from "react";
 
 export default function Fundo(props) {
-    const {liked_by, liked_by_profile, number} = props;
-
-    function likePost (e) {
-        const conteudo = e.currentTarget.closest(".post").querySelector(".conteudo");
-        const heartOutline = e.currentTarget.parentNode.querySelector("ion-icon:nth-of-type(1)");
-        const heart = e.currentTarget.parentNode.querySelector("ion-icon:nth-of-type(2)");
-        conteudo.classList.add("conteudo-liked")
-        heartOutline.classList.toggle("hide")
-        heart.classList.toggle("hide")
-
-        if (e.currentTarget === heart) {
-            conteudo.classList.remove("conteudo-liked")
-        }
-
-    }
+    const {liked_by, liked_by_profile, number, heart_type, heart_class, like_heart} = props;
 
     return (
         <div className="fundo">
             <div className="acoes">
                 <div>
-                    <ion-icon onClick={likePost} class="md hydrated" name="heart-outline"></ion-icon>
-                    <ion-icon onClick={likePost} class="md hydrated liked hide" name="heart"></ion-icon>
+                    <ion-icon onClick={like_heart} class={"md hydrated " + heart_class} name={heart_type}></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
